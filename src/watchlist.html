@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Flow</title>
+  <script type="module" src="js/movieList.mjs"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/watchlist.mjs"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="lego-icon">
+      <p>&#127909;</p>
+      <p>MovieFlow</p>
+    </a>
+    <button id="watchlist-button"></a>
+      <p>&#x1f3a6</p>
+      <p>Watchlist</p>
+    </button>
+  </header>
+
+  <main class="divider">
+    <section class="movieswatch">
+      <h1>My Watchlist</h1>
+      <ul class="movies-list">
+        <div class="watchlist"></div>
+      </ul>
+      <form id="clearWatchlistForm">
+        <label for="email">Enter your email to receive your watchlist:</label>
+        <input type="email" id="email" name="email" required>
+        <button id="submitBtn" type="submit">Send Watchlist</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="main-footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+body {
+    background: #550707;
+    margin: 0;
+    margin-bottom: 4rem;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #050505;
+}
+
+.lego-icon, #watchlist-button {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem; /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+.lego-icon {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    display: flex;
+}
+
+#form, #search {
+    display: flex;
+    align-items: center;
+}
+
+.search-class {
+    text-align: center;
+    width: 100%;
+    color: #00ffff;
+    background-color: black;
+    border: 2px solid #4c66af;
+    border-radius: 1.2rem;
+    position: relative;
+    padding: 10px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 18px;
+    letter-spacing: 4px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-family: "Roboto", sans-serif;
+}
+
+#watchlist-button {
+    background-color: #4c66af;
+    padding: 0px 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+}
+
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+
+    .lego-icon p:nth-child(2){
+        display: none;
+    }
+
+    .lego-icon{
+        padding: 11px;
+    }
+
+    #watchlist-button p:nth-child(2) {
+        display: none;
+    }
+
+    #search {
+        display: block; 
+        margin-left: auto;
+        width: auto;
+    }
+
+}
+
+.movies {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 1rem;
+    padding: 1.4rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    background: #050505;
+    max-width: 454px;
+}
+
+.movies li img {
+    max-width: 300px;
+    border-radius: 1.2rem;
+}
+
+.movies li h2 {
+    color: #fff;
+    font-size: 1.8em;
+    padding: 15px 10px 0;
+    margin-top: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.details-button {
+    color: #5b15dd;
+    background-color: black;
+    border: 2px solid #2321be;
+    border-radius: 1.2rem;
+    position: relative;
+    padding: 10px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 18px;
+    letter-spacing: 4px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+.details-button:hover {
+    box-shadow: inset 0 0 0 50px #2321be;
+    color: black !important;
+}
+
+@media screen and (max-width: 900px) {
+    .details-button {
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+/* Movie Details */
+
+.movie-details {
+    margin: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#moviePoster {
+    max-width: 100%;
+    border-radius: 1.2rem;
+}
+
+#movieTitle {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+#movieTagline {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#movieReleaseDate {
+    font-size: 1.2em;
+}
+
+#popularityStars {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#popularityStars span {
+    color: #ffd700;
+}
+
+#movieOverview {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+#watchlistButton {
+    background-color: #4c66af;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#watchlistButton:hover {
+    background-color: #4c66af;
+}
+
+.movie-not-available {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Additional styles for smaller screens */
+
+@media screen and (max-width: 600px) {
+
+    .movie-details {
+        margin: 20px;
+        color: #fff;
+        display: block;
+    }
+    #movieTitle {
+        font-size: 2em;
+    }
+
+    #movieReleaseDate,
+    #popularityStars {
+        font-size: 1em;
+    }
+
+    #movieOverview {
+        font-size: 1em;
+        margin-top: 15px;
+    }
+
+    #watchlistButton {
+        font-size: 1em;
+        margin-top: 15px;
+    }
+}
+
+/* WATCHLIST */
+
+.divider {
+    color: #fff;
+}
+
+.movieswatch {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.movieswatch h1{
+    margin-left: 2rem;
+    font-size: 2.5rem;
+}
+
+.movies-list{
+    padding: 0 !important;
+}
+
+.watchlist div{
+    margin: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.watchlist div img{
+    width: 200px;
+}
+
+.watchlist div h2{
+    margin-left: 3rem;
+}
+
+.watchlist div button{
+    background-color: #242323; 
+    color: #fff;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 1em; 
+    transition: background-color 0.3s ease; 
+}
+
+.watchlist div button:hover {
+    background-color: #242323;
+}
+
+.watchlist .stars {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ffd700;
+}
+
+@media screen and (max-width: 600px) {
+
+    .movieswatch h1{
+        margin-left: 0rem;
+        font-size: 2rem;
+    }
+
+    .movieswatch h1 {
+        text-align: center;
+    }
+ 
+    .watchlist div {
+        display: flex;
+        flex-direction: column;
+    }
+    .watchlist div h2 {
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+
+    .watchlist .stars {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* WATCHLIST FORM */
+
+#clearWatchlistForm {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#clearWatchlistForm label {
+    color: #fff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#clearWatchlistForm input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #4c66af;
+    border-radius: 1.2rem;
+}
+
+#submitBtn {
+    background-color: #4c66af;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+#submitBtn:hover {
+    background-color: #4c66af;
+}
+
+
+/* FOOTER */
+
+#main-footer {
+    background-color: #050505;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+  

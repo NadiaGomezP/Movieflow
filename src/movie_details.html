@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <script type="module" src="js/movieDetails.mjs"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/watchlist.mjs"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="lego-icon">
+            <p>&#127909;</p>
+            <p>MovieFlow</p>
+        </a>
+        <button id="watchlist-button"></a>
+            <p>&#x1f3a6</p>
+            <p>Watchlist</p>
+        </button>
+    </header>
+
+    <div class="movie-details">
+        <img src="" alt="Movie Poster" id="moviePoster">
+        <div class="movie-details-grid">
+            <h1 id="movieTitle"></h1>
+            <h2 id="movieTagline"></h2>
+            <h3>Release Date: <span id="movieReleaseDate"></span></h3>
+            <div id="popularityStars"></div>
+            <p id="movieOverview"></p>
+            <button id="watchlistButton">Add to Watchlist</button>
+        </div>
+    </div>
+
+    <footer id="main-footer"></footer>
+
+</body>
+
+</html>
